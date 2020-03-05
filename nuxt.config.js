@@ -39,6 +39,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@/modules/svg-sprite-inject.js',
   ],
   /*
   ** Build configuration
