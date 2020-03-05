@@ -24,6 +24,17 @@
           GitHub
         </a>
       </div>
+      <div class="svg-icons">
+        <svg>
+          <use xlink:href="#icon-facebook" />
+        </svg>
+        <svg>
+          <use xlink:href="#icon-twitter" />
+        </svg>
+        <svg>
+          <use xlink:href="#icon-pinterest" />
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -68,5 +79,9 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.svg-icons {
+  padding-top: 40px;
 }
 </style>
