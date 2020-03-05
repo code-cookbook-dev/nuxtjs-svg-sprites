@@ -47,6 +47,20 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      // Find existing rule for images and svg files
+      const svgRule = config.module.rules.find((rule) => rule.test.test('.svg'))
+
+      // Replace regex pattern of existing rule to match only images
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/
+
+      // Add new rule for svg files
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'raw-loader',
+        options: {
+          esModule: false
+        }
+      })
     }
   }
 }
